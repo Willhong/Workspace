@@ -24,6 +24,7 @@ def startTimer():
     timer = threading.Timer(15, startTimer)
     timer.start()
 
+
 def GetPrice(type,address):
     f=open('/Users/hong/Library/Mobile Documents/com~apple~CloudDocs/저장용/ltog.txt','a')
     global elements
@@ -41,10 +42,6 @@ def GetPrice(type,address):
     f.write(timestamp+type+' 시세 : '+current_price+'\n')
     f.close()
     
-
-
-
-url = 'https://dexata.kr/?tokenA='+''+'&tokenB='
 
 s=Service(ChromeDriverManager().install())
 options = webdriver.ChromeOptions()
